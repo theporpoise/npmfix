@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# This will fix issues with npm
+# by creating a directory in local hard drive
+# and setting the configuration value.
+
+DIRECTORY="npm-cache";
+
+mkdir ~/goinfre/$DIRECTORY
+npm config set cache /Volumes/Storage/goinfre/$(whoami)/$DIRECTORY
+
+# To check if it worked
+npm config get cache
